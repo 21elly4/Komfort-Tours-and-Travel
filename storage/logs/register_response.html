@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="fc1531ec3e63a1db56848f3a4baa4b7af7716d3e9c1ae7341e1a9cc486bc67b9">
+    <title>Register - Komfort Tours & Travel</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+        <header class="site-header">
+        <nav class="container nav-bar">
+            <a href="/" class="logo">
+                <i class="fas fa-route"></i> Komfort
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Services</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register" class="btn">Register</a></li>
+                            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        
+        
+        
+        
+        
+<section class="auth-section">
+    <div class="container">
+        <div class="auth-card auth-card-large">
+            <div class="auth-header">
+                <h1>Create Account</h1>
+                <p>Join Komfort Tours & Travel for amazing experiences</p>
+            </div>
+            
+            
+            <form method="POST" action="/register" class="auth-form">
+                <input type="hidden" name="csrf_token" value="fc1531ec3e63a1db56848f3a4baa4b7af7716d3e9c1ae7341e1a9cc486bc67b9">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" required 
+                               value="Test"
+                               placeholder="First name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" required 
+                               value="User"
+                               placeholder="Last name">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required 
+                           value="traveler@example.com"
+                           placeholder="Enter your email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" 
+                           value="0712345678"
+                           placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required 
+                           placeholder="Create a password (min 6 characters)">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password_confirmation">Confirm Password</label>
+                    <input type="password" id="password_confirmation" name="password_confirmation" required 
+                           placeholder="Confirm your password">
+                </div>
+                
+                <div class="form-group form-group-checkbox">
+                    <label>
+                        <input type="checkbox" name="terms" required> 
+                        I agree to the <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-block btn-large">Create Account</button>
+            </form>
+            
+            <div class="auth-footer">
+                <p>Already have an account? <a href="/login">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+        <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Komfort Tours & Travel</h3>
+                    <p>Your trusted partner for unforgettable travel experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services">Corporate Tours</a></li>
+                        <li><a href="/services">Eco Tours</a></li>
+                        <li><a href="/services">Events</a></li>
+                        <li><a href="/services">Retreats</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-phone"></i> +254 XXX XXX XXX</p>
+                    <p><i class="fas fa-envelope"></i> info@komfort.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Komfort Tours & Travel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
+

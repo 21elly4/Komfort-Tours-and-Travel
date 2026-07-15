@@ -1,0 +1,42 @@
+# Environment
+.env
+.env.local
+.env.production
+
+# Vendor
+/vendor/
+
+# Composer
+composer.lock
+composer.phar
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+/storage/logs/*.log
+
+# Cache
+/storage/cache/*
+!/storage/cache/.gitkeep
+
+# Uploads
+/storage/uploads/*
+!/storage/uploads/.gitkeep
+
+# Testing
+/phpunit.xml
+.phpunit.result.cache
+coverage/
+
+# Build
+/build/
+/dist/
