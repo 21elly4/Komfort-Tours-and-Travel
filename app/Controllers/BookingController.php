@@ -96,7 +96,7 @@ class BookingController extends BaseController
             
             Database::commit();
             
-            Log::info('Booking created', [
+            Logger::info('Booking created', [
                 'booking_id' => $bookingId,
                 'user_id' => $user['id'],
                 'amount' => $totalAmount
@@ -107,7 +107,7 @@ class BookingController extends BaseController
             
         } catch (\Exception $e) {
             Database::rollback();
-            Log::error('Booking creation failed', ['error' => $e->getMessage()]);
+            Logger::error('Booking creation failed', ['error' => $e->getMessage()]);
             $this->setFlash('error', 'Booking failed. Please try again.');
             $this->back();
         }
@@ -154,13 +154,13 @@ class BookingController extends BaseController
         try {
             $bookingModel->cancel($id);
             
-            Log::info('Booking cancelled', ['booking_id' => $id, 'user_id' => $user['id']]);
+            Logger::info('Booking cancelled', ['booking_id' => $id, 'user_id' => $user['id']]);
             
             $this->setFlash('success', 'Booking cancelled successfully.');
             $this->redirect('/dashboard');
             
         } catch (\Exception $e) {
-            Log::error('Booking cancellation failed', ['error' => $e->getMessage()]);
+            Logger::error('Booking cancellation failed', ['error' => $e->getMessage()]);
             $this->setFlash('error', 'Cancellation failed. Please try again.');
             $this->back();
         }

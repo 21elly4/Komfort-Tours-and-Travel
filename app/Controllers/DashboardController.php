@@ -97,13 +97,13 @@ class DashboardController extends BaseController
             $userModel = new User();
             $userModel->update($user['id'], $data);
             
-            Log::info('User profile updated', ['user_id' => $user['id']]);
+            Logger::info('User profile updated', ['user_id' => $user['id']]);
             
             $this->setFlash('success', 'Profile updated successfully.');
             $this->redirect('/dashboard/profile');
             
         } catch (\Exception $e) {
-            Log::error('Profile update failed', ['error' => $e->getMessage()]);
+            Logger::error('Profile update failed', ['error' => $e->getMessage()]);
             $this->setFlash('error', 'Profile update failed. Please try again.');
             $this->back();
         }

@@ -15,7 +15,7 @@ abstract class BaseController
         $viewPath = __DIR__ . '/../Views/' . str_replace('.', '/', $view) . '.php';
         
         if (!file_exists($viewPath)) {
-            Log::error("View not found: {$view}");
+            Logger::error("View not found: {$view}");
             throw new \RuntimeException("View not found: {$view}");
         }
 
